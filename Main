@@ -81,6 +81,7 @@ function UInit.Init()
     UIL["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
     UIL["9"]["Position"] = UDim2.new(0.5092542171478271, 0, 0.8119999170303345, 0);
     UIL["9"]["BackgroundTransparency"] = 1;
+    UIL["9"]["LayoutOrder"] = 1;
 
     -- StarterGui.KeyUI.Main.Buttons.Get.Background
     UIL["a"] = Instance.new("Frame", UIL["9"]);
@@ -123,6 +124,7 @@ function UInit.Init()
     UIL["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
     UIL["d"]["Position"] = UDim2.new(0.5092542171478271, 0, 0.8119999170303345, 0);
     UIL["d"]["BackgroundTransparency"] = 1;
+    UIL["d"]["LayoutOrder"] = 2;
 
     -- StarterGui.KeyUI.Main.Buttons.Check.Background
     UIL["e"] = Instance.new("Frame", UIL["d"]);
