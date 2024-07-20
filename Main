@@ -2,230 +2,266 @@ local UInit = {}
 
 function UInit.Init()
     local UIL = {};
-    
     -- StarterGui.KeyUI
     UIL["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
     UIL["1"]["Name"] = [[KeyUI]];
     UIL["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-    
+
     -- StarterGui.KeyUI.Main
     UIL["2"] = Instance.new("Frame", UIL["1"]);
     UIL["2"]["BorderSizePixel"] = 0;
-    UIL["2"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+    UIL["2"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
     UIL["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["2"]["Size"] = UDim2.new(0.27861, 0, 0.23137, 0);
-    UIL["2"]["Position"] = UDim2.new(0.5, 0, 0.47661, 0);
+    UIL["2"]["Size"] = UDim2.new(0.2786071002483368, 0, 0.27815499901771545, 0);
     UIL["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    UIL["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
     UIL["2"]["Name"] = [[Main]];
-    
+
     -- StarterGui.KeyUI.Main.UICorner
     UIL["3"] = Instance.new("UICorner", UIL["2"]);
-    UIL["3"]["CornerRadius"] = UDim.new(0.05, 0);
-    
-    -- StarterGui.KeyUI.Main.Buttons
+    UIL["3"]["CornerRadius"] = UDim.new(0.029999999329447746, 0);
+
+    -- StarterGui.KeyUI.Main.MainTextbox
     UIL["4"] = Instance.new("Frame", UIL["2"]);
     UIL["4"]["BorderSizePixel"] = 0;
-    UIL["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["4"]["BackgroundColor3"] = Color3.fromRGB(19, 19, 19);
     UIL["4"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["4"]["Size"] = UDim2.new(0.87954, 0, 0.1961, 0);
-    UIL["4"]["Position"] = UDim2.new(0.507, 0, 0.8, 0);
+    UIL["4"]["Size"] = UDim2.new(0.8793182373046875, 0, 0.15445126593112946, 0);
     UIL["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["4"]["Name"] = [[Buttons]];
-    UIL["4"]["BackgroundTransparency"] = 1;
-    
-    -- StarterGui.KeyUI.Main.Buttons.Get
-    UIL["5"] = Instance.new("ImageButton", UIL["4"]);
-    UIL["5"]["BorderSizePixel"] = 0;
-    UIL["5"]["ScaleType"] = Enum.ScaleType.Fit;
-    UIL["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["5"]["LayoutOrder"] = 1;
-    UIL["5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["5"]["Size"] = UDim2.new(0.49323, 0, 0.81983, 0);
-    UIL["5"]["BackgroundTransparency"] = 1;
-    UIL["5"]["Name"] = [[Get]];
-    UIL["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["5"]["Position"] = UDim2.new(0.50925, 0, 0.812, 0);
-    
-    -- StarterGui.KeyUI.Main.Buttons.Get.Background
-    UIL["6"] = Instance.new("Frame", UIL["5"]);
-    UIL["6"]["BorderSizePixel"] = 0;
-    UIL["6"]["BackgroundColor3"] = Color3.fromRGB(0, 146, 255);
-    UIL["6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["6"]["Size"] = UDim2.new(1, 0, 1, 0);
-    UIL["6"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-    UIL["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["6"]["Name"] = [[Background]];
-    
-    -- StarterGui.KeyUI.Main.Buttons.Get.Background.UICorner
-    UIL["7"] = Instance.new("UICorner", UIL["6"]);
-    UIL["7"]["CornerRadius"] = UDim.new(0.1, 0);
-    
-    -- StarterGui.KeyUI.Main.Buttons.Get.TextLabel
-    UIL["8"] = Instance.new("TextLabel", UIL["5"]);
-    UIL["8"]["TextWrapped"] = true;
+    UIL["4"]["Position"] = UDim2.new(0.5074815154075623, 0, 0.6596903800964355, 0);
+    UIL["4"]["Name"] = [[MainTextbox]];
+
+    -- StarterGui.KeyUI.Main.MainTextbox.UICorner
+    UIL["5"] = Instance.new("UICorner", UIL["4"]);
+    UIL["5"]["CornerRadius"] = UDim.new(0.10000000149011612, 0);
+
+    -- StarterGui.KeyUI.Main.MainTextbox.UIStroke
+    UIL["6"] = Instance.new("UIStroke", UIL["4"]);
+    UIL["6"]["Color"] = Color3.fromRGB(255, 255, 255);
+    UIL["6"]["Thickness"] = 1.5;
+
+    -- StarterGui.KeyUI.Main.MainTextbox.TextBox
+    UIL["7"] = Instance.new("TextBox", UIL["4"]);
+    UIL["7"]["CursorPosition"] = -1;
+    UIL["7"]["BorderSizePixel"] = 0;
+    UIL["7"]["TextSize"] = 14;
+    UIL["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+    UIL["7"]["TextWrapped"] = true;
+    UIL["7"]["TextScaled"] = true;
+    UIL["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+    UIL["7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+    UIL["7"]["BackgroundTransparency"] = 1;
+    UIL["7"]["PlaceholderText"] = [[Insert Key]];
+    UIL["7"]["Size"] = UDim2.new(0.9005927443504333, 0, 0.5955591797828674, 0);
+    UIL["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    UIL["7"]["Text"] = [[]];
+    UIL["7"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+    -- StarterGui.KeyUI.Main.Buttons
+    UIL["8"] = Instance.new("Frame", UIL["2"]);
     UIL["8"]["BorderSizePixel"] = 0;
-    UIL["8"]["TextScaled"] = true;
     UIL["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["8"]["TextSize"] = 14;
-    UIL["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-    UIL["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["8"]["BackgroundTransparency"] = 1;
     UIL["8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["8"]["Size"] = UDim2.new(0.86775, 0, 0.62855, 0);
+    UIL["8"]["BackgroundTransparency"] = 1;
+    UIL["8"]["Size"] = UDim2.new(0.8793181777000427, 0, 0.16256508231163025, 0);
     UIL["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["8"]["Text"] = [[GET KEY]];
-    UIL["8"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-    
-    -- StarterGui.KeyUI.Main.Buttons.Check
-    UIL["9"] = Instance.new("ImageButton", UIL["4"]);
+    UIL["8"]["Position"] = UDim2.new(0.5074815154075623, 0, 0.8511248230934143, 0);
+    UIL["8"]["Name"] = [[Buttons]];
+
+    -- StarterGui.KeyUI.Main.Buttons.Get
+    UIL["9"] = Instance.new("ImageButton", UIL["8"]);
     UIL["9"]["BorderSizePixel"] = 0;
     UIL["9"]["ScaleType"] = Enum.ScaleType.Fit;
     UIL["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["9"]["LayoutOrder"] = 2;
     UIL["9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["9"]["Size"] = UDim2.new(0.48898, 0, 0.81983, 0);
-    UIL["9"]["BackgroundTransparency"] = 1;
-    UIL["9"]["Name"] = [[Check]];
+    UIL["9"]["Size"] = UDim2.new(0.4932289123535156, 0, 0.819831132888794, 0);
+    UIL["9"]["Name"] = [[Get]];
     UIL["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["9"]["Position"] = UDim2.new(0.50925, 0, 0.812, 0);
-    
-    -- StarterGui.KeyUI.Main.Buttons.Check.Background
+    UIL["9"]["Position"] = UDim2.new(0.5092542171478271, 0, 0.8119999170303345, 0);
+    UIL["9"]["BackgroundTransparency"] = 1;
+    UIL["9"]["LayoutOrder"] = 1;
+
+    -- StarterGui.KeyUI.Main.Buttons.Get.Background
     UIL["a"] = Instance.new("Frame", UIL["9"]);
     UIL["a"]["BorderSizePixel"] = 0;
-    UIL["a"]["BackgroundColor3"] = Color3.fromRGB(0, 255, 142);
+    UIL["a"]["BackgroundColor3"] = Color3.fromRGB(0, 145, 255);
     UIL["a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
     UIL["a"]["Size"] = UDim2.new(1, 0, 1, 0);
-    UIL["a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
     UIL["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    UIL["a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
     UIL["a"]["Name"] = [[Background]];
-    
-    -- StarterGui.KeyUI.Main.Buttons.Check.Background.UICorner
+
+    -- StarterGui.KeyUI.Main.Buttons.Get.Background.UICorner
     UIL["b"] = Instance.new("UICorner", UIL["a"]);
-    UIL["b"]["CornerRadius"] = UDim.new(0.1, 0);
-    
-    -- StarterGui.KeyUI.Main.Buttons.Check.TextLabel
+    UIL["b"]["CornerRadius"] = UDim.new(0.10000000149011612, 0);
+
+    -- StarterGui.KeyUI.Main.Buttons.Get.TextLabel
     UIL["c"] = Instance.new("TextLabel", UIL["9"]);
     UIL["c"]["TextWrapped"] = true;
     UIL["c"]["BorderSizePixel"] = 0;
     UIL["c"]["TextScaled"] = true;
     UIL["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["c"]["TextSize"] = 14;
     UIL["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+    UIL["c"]["TextSize"] = 14;
     UIL["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["c"]["BackgroundTransparency"] = 1;
     UIL["c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["c"]["Size"] = UDim2.new(0.86775, 0, 0.62855, 0);
+    UIL["c"]["Size"] = UDim2.new(0.8677495718002319, 0, 0.6285482048988342, 0);
     UIL["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["c"]["Text"] = [[CHECK KEY]];
+    UIL["c"]["Text"] = [[GET KEY]];
+    UIL["c"]["BackgroundTransparency"] = 1;
     UIL["c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-    
-    -- StarterGui.KeyUI.Main.Buttons.UIListLayout
-    UIL["d"] = Instance.new("UIListLayout", UIL["4"]);
-    UIL["d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-    UIL["d"]["Padding"] = UDim.new(0.025, 0);
-    UIL["d"]["VerticalAlignment"] = Enum.VerticalAlignment.Bottom;
-    UIL["d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-    UIL["d"]["FillDirection"] = Enum.FillDirection.Horizontal;
-    
-    -- StarterGui.KeyUI.Main.TextLabel
-    UIL["e"] = Instance.new("TextLabel", UIL["2"]);
-    UIL["e"]["TextWrapped"] = true;
+
+    -- StarterGui.KeyUI.Main.Buttons.Check
+    UIL["d"] = Instance.new("ImageButton", UIL["8"]);
+    UIL["d"]["BorderSizePixel"] = 0;
+    UIL["d"]["ScaleType"] = Enum.ScaleType.Fit;
+    UIL["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+    UIL["d"]["Size"] = UDim2.new(0.48897692561149597, 0, 0.819831132888794, 0);
+    UIL["d"]["Name"] = [[Check]];
+    UIL["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    UIL["d"]["Position"] = UDim2.new(0.5092542171478271, 0, 0.8119999170303345, 0);
+    UIL["d"]["BackgroundTransparency"] = 1;
+    UIL["d"]["LayoutOrder"] = 2;
+
+    -- StarterGui.KeyUI.Main.Buttons.Check.Background
+    UIL["e"] = Instance.new("Frame", UIL["d"]);
     UIL["e"]["BorderSizePixel"] = 0;
-    UIL["e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-    UIL["e"]["TextScaled"] = true;
-    UIL["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["e"]["TextSize"] = 14;
-    UIL["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-    UIL["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["e"]["BackgroundTransparency"] = 1;
-    UIL["e"]["Size"] = UDim2.new(0.32936, 0, 0.11606, 0);
+    UIL["e"]["BackgroundColor3"] = Color3.fromRGB(0, 255, 141);
+    UIL["e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+    UIL["e"]["Size"] = UDim2.new(1, 0, 1, 0);
     UIL["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["e"]["Text"] = [[WING HUB]];
-    UIL["e"]["Position"] = UDim2.new(0.06363, 0, 0.06403, 0);
-    
-    -- StarterGui.KeyUI.Main.TextLabel
-    UIL["f"] = Instance.new("TextLabel", UIL["2"]);
-    UIL["f"]["TextWrapped"] = true;
-    UIL["f"]["BorderSizePixel"] = 0;
-    UIL["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-    UIL["f"]["TextScaled"] = true;
-    UIL["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["f"]["TextSize"] = 14;
-    UIL["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-    UIL["f"]["TextColor3"] = Color3.fromRGB(117, 117, 117);
-    UIL["f"]["BackgroundTransparency"] = 1;
-    UIL["f"]["Size"] = UDim2.new(0.32936, 0, 0.11606, 0);
-    UIL["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["f"]["Text"] = [[Powered by PandaAuth.]];
-    UIL["f"]["Position"] = UDim2.new(0.06363, 0, 0.18009, 0);
-    
-    -- StarterGui.KeyUI.Main.Frame
-    UIL["10"] = Instance.new("Frame", UIL["2"]);
+    UIL["e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+    UIL["e"]["Name"] = [[Background]];
+
+    -- StarterGui.KeyUI.Main.Buttons.Check.Background.UICorner
+    UIL["f"] = Instance.new("UICorner", UIL["e"]);
+    UIL["f"]["CornerRadius"] = UDim.new(0.10000000149011612, 0);
+
+    -- StarterGui.KeyUI.Main.Buttons.Check.TextLabel
+    UIL["10"] = Instance.new("TextLabel", UIL["d"]);
+    UIL["10"]["TextWrapped"] = true;
     UIL["10"]["BorderSizePixel"] = 0;
-    UIL["10"]["BackgroundColor3"] = Color3.fromRGB(122, 122, 122);
+    UIL["10"]["TextScaled"] = true;
+    UIL["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+    UIL["10"]["TextSize"] = 14;
+    UIL["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
     UIL["10"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["10"]["Size"] = UDim2.new(0.99931, 0, 0.008, 0);
-    UIL["10"]["Position"] = UDim2.new(0.49966, 0, 0.32816, 0);
+    UIL["10"]["Size"] = UDim2.new(0.8677495718002319, 0, 0.6285482048988342, 0);
     UIL["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    
+    UIL["10"]["Text"] = [[CHECK KEY]];
+    UIL["10"]["BackgroundTransparency"] = 1;
+    UIL["10"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+    -- StarterGui.KeyUI.Main.Buttons.UIListLayout
+    UIL["11"] = Instance.new("UIListLayout", UIL["8"]);
+    UIL["11"]["VerticalAlignment"] = Enum.VerticalAlignment.Bottom;
+    UIL["11"]["FillDirection"] = Enum.FillDirection.Horizontal;
+    UIL["11"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+    UIL["11"]["Padding"] = UDim.new(0.02500000037252903, 0);
+    UIL["11"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
     -- StarterGui.KeyUI.Main.TextLabel
-    UIL["11"] = Instance.new("TextLabel", UIL["2"]);
-    UIL["11"]["TextWrapped"] = true;
-    UIL["11"]["BorderSizePixel"] = 0;
-    UIL["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-    UIL["11"]["TextScaled"] = true;
-    UIL["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["11"]["TextSize"] = 14;
-    UIL["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-    UIL["11"]["TextColor3"] = Color3.fromRGB(134, 134, 134);
-    UIL["11"]["BackgroundTransparency"] = 1;
-    UIL["11"]["Size"] = UDim2.new(0.88329, 0, 0.26013, 0);
-    UIL["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["11"]["Text"] = [[By getting a key, you help the developers of Wing Hub to continue making more high quality scripts. We appreciate you sticking with us!]];
-    UIL["11"]["Position"] = UDim2.new(0.06363, 0, 0.38019, 0);
-    
-    -- StarterGui.KeyUI.Hide
-    UIL["12"] = Instance.new("ImageButton", UIL["1"]);
+    UIL["12"] = Instance.new("TextLabel", UIL["2"]);
+    UIL["12"]["TextWrapped"] = true;
     UIL["12"]["BorderSizePixel"] = 0;
+    UIL["12"]["TextScaled"] = true;
     UIL["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["12"]["AnchorPoint"] = Vector2.new(0.5, 0);
-    UIL["12"]["Size"] = UDim2.new(0, 201, 0, 38);
-    UIL["12"]["BackgroundTransparency"] = 1;
-    UIL["12"]["Name"] = [[Hide]];
+    UIL["12"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+    UIL["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+    UIL["12"]["TextSize"] = 14;
+    UIL["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["12"]["Size"] = UDim2.new(0.32901766896247864, 0, 0.09662503749132156, 0);
     UIL["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["12"]["Position"] = UDim2.new(0.5, 0, 0.011, 0);
-    
-    -- StarterGui.KeyUI.Hide.Background
-    UIL["13"] = Instance.new("Frame", UIL["12"]);
+    UIL["12"]["Text"] = [[WING HUB]];
+    UIL["12"]["BackgroundTransparency"] = 1;
+    UIL["12"]["Position"] = UDim2.new(0.06407009065151215, 0, 0.052906159311532974, 0);
+
+    -- StarterGui.KeyUI.Main.TextLabel
+    UIL["13"] = Instance.new("TextLabel", UIL["2"]);
+    UIL["13"]["TextWrapped"] = true;
     UIL["13"]["BorderSizePixel"] = 0;
-    UIL["13"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
-    UIL["13"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["13"]["Size"] = UDim2.new(1, 0, 1, 0);
-    UIL["13"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+    UIL["13"]["TextScaled"] = true;
+    UIL["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+    UIL["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+    UIL["13"]["TextSize"] = 14;
+    UIL["13"]["TextColor3"] = Color3.fromRGB(116, 116, 116);
+    UIL["13"]["Size"] = UDim2.new(0.32901766896247864, 0, 0.09662503749132156, 0);
     UIL["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["13"]["Name"] = [[Background]];
-    
-    -- StarterGui.KeyUI.Hide.Background.UICorner
-    UIL["14"] = Instance.new("UICorner", UIL["13"]);
-    UIL["14"]["CornerRadius"] = UDim.new(0.2, 0);
-    
-    -- StarterGui.KeyUI.Hide.TextLabel
-    UIL["15"] = Instance.new("TextLabel", UIL["12"]);
+    UIL["13"]["Text"] = [[Powered by PandaAuth.]];
+    UIL["13"]["BackgroundTransparency"] = 1;
+    UIL["13"]["Position"] = UDim2.new(0.06407009065151215, 0, 0.14944173395633698, 0);
+
+    -- StarterGui.KeyUI.Main.Frame
+    UIL["14"] = Instance.new("Frame", UIL["2"]);
+    UIL["14"]["BorderSizePixel"] = 0;
+    UIL["14"]["BackgroundColor3"] = Color3.fromRGB(121, 121, 121);
+    UIL["14"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+    UIL["14"]["Size"] = UDim2.new(1, 0, 0, 1);
+    UIL["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    UIL["14"]["Position"] = UDim2.new(0.5, 0, 0.27300000190734863, 0);
+
+    -- StarterGui.KeyUI.Main.TextLabel
+    UIL["15"] = Instance.new("TextLabel", UIL["2"]);
     UIL["15"]["TextWrapped"] = true;
     UIL["15"]["BorderSizePixel"] = 0;
     UIL["15"]["TextScaled"] = true;
     UIL["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["15"]["TextSize"] = 14;
+    UIL["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
     UIL["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-    UIL["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-    UIL["15"]["BackgroundTransparency"] = 1;
-    UIL["15"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-    UIL["15"]["Size"] = UDim2.new(1, 0, 0.55797, 0);
+    UIL["15"]["TextSize"] = 14;
+    UIL["15"]["TextColor3"] = Color3.fromRGB(133, 133, 133);
+    UIL["15"]["Size"] = UDim2.new(0.8830705285072327, 0, 0.2180350124835968, 0);
     UIL["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-    UIL["15"]["Text"] = [[HIDE]];
-    UIL["15"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-    
-    
+    UIL["15"]["Text"] = [[By obtaining a key, you help the developers of Wing Hub to continue making more high quality scripts. We appreciate you sticking with us!]];
+    UIL["15"]["BackgroundTransparency"] = 1;
+    UIL["15"]["Position"] = UDim2.new(0.06407015025615692, 0, 0.31612610816955566, 0);
+
+    -- StarterGui.KeyUI.Hide
+    UIL["16"] = Instance.new("ImageButton", UIL["1"]);
+    UIL["16"]["BorderSizePixel"] = 0;
+    UIL["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["16"]["AnchorPoint"] = Vector2.new(0.5, 0);
+    UIL["16"]["Size"] = UDim2.new(0, 201, 0, 38);
+    UIL["16"]["Name"] = [[Hide]];
+    UIL["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    UIL["16"]["Position"] = UDim2.new(0.5, 0, 0.010999999940395355, 0);
+    UIL["16"]["BackgroundTransparency"] = 1;
+
+    -- StarterGui.KeyUI.Hide.Background
+    UIL["17"] = Instance.new("Frame", UIL["16"]);
+    UIL["17"]["BorderSizePixel"] = 0;
+    UIL["17"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+    UIL["17"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+    UIL["17"]["Size"] = UDim2.new(1, 0, 1, 0);
+    UIL["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    UIL["17"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+    UIL["17"]["Name"] = [[Background]];
+
+    -- StarterGui.KeyUI.Hide.Background.UICorner
+    UIL["18"] = Instance.new("UICorner", UIL["17"]);
+    UIL["18"]["CornerRadius"] = UDim.new(0.20000000298023224, 0);
+
+    -- StarterGui.KeyUI.Hide.TextLabel
+    UIL["19"] = Instance.new("TextLabel", UIL["16"]);
+    UIL["19"]["TextWrapped"] = true;
+    UIL["19"]["BorderSizePixel"] = 0;
+    UIL["19"]["TextScaled"] = true;
+    UIL["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    UIL["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+    UIL["19"]["TextSize"] = 14;
+    UIL["19"]["TextColor3"] = Color3.fromRGB(254, 254, 254);
+    UIL["19"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+    UIL["19"]["Size"] = UDim2.new(1, 0, 0.5579709410667419, 0);
+    UIL["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+    UIL["19"]["Text"] = [[HIDE]];
+    UIL["19"]["BackgroundTransparency"] = 1;
+    UIL["19"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
     return UIL["1"], require;
 end
 
